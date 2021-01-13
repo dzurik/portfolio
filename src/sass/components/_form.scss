@@ -1,0 +1,198 @@
+.form {
+  height: 85%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  grid-template-rows: min-content min-content minmax(5rem, 1fr) min-content;
+
+  @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+    grid-template-rows: min-content min-content minmax(min-content, 1fr) min-content;
+  }
+
+  @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+    height: auto;
+  }
+
+  @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+    grid-gap: 0rem;
+    height: 88%;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: absolute;
+    transition: all 0.3s;
+    bottom: 0;
+    left: 1rem;
+    color: $color-primary;
+
+    &--textarea {
+      bottom: -2rem;
+    }
+  }
+
+  &__icon {
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 400;
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    display: none;
+
+    @media only screen and (orientation: portrait) and (min-width: $bp-tiny) and (max-width: $bp-smallest) {
+      top: 0.5rem;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__input {
+    border: 0;
+    border-bottom: 1px solid $color-white-light;
+    background: none;
+    outline: 0;
+    font-size: 1.7rem;
+    font-family: 'Roboto';
+    padding: 1rem;
+    width: 95%;
+    color: $color-white-light;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      padding: 0.5rem;
+    }
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+      margin-bottom: 0;
+    }
+
+    &::placeholder {
+      color: $color-white-light;
+      font-style: italic;
+      opacity: 0.5;
+      height: 2rem;
+
+      @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+        font-size: 1.4rem;
+      }
+
+      @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &--input {
+      margin-bottom: 2rem;
+
+      @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+        margin-bottom: 0rem;
+      }
+    }
+
+    &--textarea {
+      font-size: 1.7rem;
+      height: 100%;
+      resize: none;
+    }
+  }
+
+  &__box--textarea {
+    grid-column: 1 / -1;
+  }
+
+  &__bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    padding-bottom: 1.5rem;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      padding-bottom: 0.5rem;
+    }
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+      padding-bottom: 2rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-small) {
+      padding: 0;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      padding-top: 1rem;
+      padding-bottom: 0;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__hide {
+    flex: 1 0 70%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.5s;
+  }
+
+  &__alert {
+    opacity: 0 !important;
+  }
+
+  &__msg {
+    opacity: 1;
+    transition: all 0.5s;
+    color: $color-white-light;
+
+    @media only screen and (orientation: portrait) and (min-width: $bp-tiny) and (max-width: $bp-smallest) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__send-status {
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+  }
+
+  &__submit {
+    background: none;
+    outline: none;
+    border: none;
+    color: $color-white-light;
+    cursor: pointer;
+  }
+
+  &__submit-button {
+    background: none;
+    outline: none;
+    border: none;
+  }
+}
+
+.accepted {
+  background-color: $color-accept;
+}
+
+.declined {
+  background-color: $color-decline;
+}
+
+.icon-checkmark {
+  background-color: $color-accept;
+}
+
+.icon-cross {
+  background-color: $color-decline;
+}

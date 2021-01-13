@@ -1,0 +1,8 @@
+@function multiple-box-shadow($n) {
+  $value: '#{random(100)}vw #{random(90)}vh #e1e1e1';
+
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(100)}vw #{random(90)}vh #e1e1e1';
+  }
+  @return unquote($value);
+}

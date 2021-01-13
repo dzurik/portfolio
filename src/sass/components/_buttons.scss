@@ -1,0 +1,199 @@
+.btn {
+  display: block;
+  position: relative;
+  border: 0;
+  outline: 0;
+
+  &__span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 2;
+    color: $color-white-light;
+    position: relative;
+    transition: all 0.3s;
+
+    &--contact {
+      transition: all 0.3s;
+      transform: translateX(1.5rem);
+    }
+  }
+
+  &__diminishing {
+    width: 15rem;
+    height: 5rem;
+    line-height: 5rem;
+    background: transparent;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+      height: 4rem;
+      line-height: 4rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      height: 4rem;
+      line-height: 4rem;
+    }
+
+    text-align: center;
+    cursor: pointer;
+
+    transition: all 0.3s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-primary;
+      z-index: 1;
+      transition: all 0.3s;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+      background: $color-white-light;
+      border: 1px solid rgba($color-white-light, 0.5);
+      transform: scale(1.4, 1.4);
+      transition: all 0.3s;
+    }
+
+    &:hover::before {
+      opacity: 0;
+      transform: scale(0.5, 0.5);
+    }
+
+    &:hover::after {
+      opacity: 1;
+      color: red;
+      transform: scale(1, 1);
+    }
+  }
+
+  &:hover .btn__span--works {
+    color: $color-primary;
+  }
+
+  &__popup {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    width: 15rem;
+    height: 5rem;
+    line-height: 5rem;
+    background: transparent;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 2px solid $color-primary;
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      height: 4rem;
+      line-height: 4rem;
+    }
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+      height: 4rem;
+      line-height: 4rem;
+    }
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 0;
+      width: 100%;
+      border-top: 2px solid $color-primary;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+
+    &:hover .btn__span--contact {
+      transform: translateX(0);
+    }
+
+    &:hover .btn__popup--arrow {
+      transform: translateY(0);
+    }
+  }
+
+  &__popup--arrow {
+    color: $color-white-light;
+    margin-left: 1rem;
+    transform: translateY(3rem);
+    transition: all 0.3s;
+  }
+
+  &__submit-button {
+    display: inline-block;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Roboto';
+    color: $color-white-light;
+    cursor: pointer;
+
+    padding: 0.7rem 2.5rem;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.3s;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      font-size: 1.4rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      background-color: $color-primary;
+      z-index: -2;
+      top: 0;
+      left: 0;
+      border-radius: 10rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      background-color: $color-primary-dark;
+      transition: all 0.3s;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      border-radius: 10rem;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}

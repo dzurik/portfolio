@@ -1,0 +1,119 @@
+.navigation {
+  margin-left: -2rem;
+
+  @media only screen and (max-width: $bp-mobile) {
+    margin-left: 0;
+  }
+
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(4rem, 1fr));
+    grid-gap: 1rem;
+    justify-items: center;
+    transition: all 0.5s;
+    transform-origin: bottom;
+
+    @media only screen and (max-width: $bp-mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $color-dark;
+      overflow: hidden;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $color-dark;
+      overflow: hidden;
+    }
+  }
+
+  &__item {
+    @media only screen and (max-width: $bp-mobile) {
+      height: 10vh;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      height: 10vh;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-mobile) {
+      display: block;
+      position: relative;
+      z-index: 5;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      display: block;
+      position: relative;
+      z-index: 5;
+    }
+  }
+
+  &__mobile-line {
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    margin: 3px;
+    transition: all 0.3s;
+    background-color: $color-primary;
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    color: $color-white-dark;
+
+    transition: all 0.5s;
+
+    @media only screen and (max-width: $bp-mobile) {
+      position: relative;
+
+      z-index: 100;
+    }
+
+    transform: translateY(0px);
+  }
+
+  &__link:hover,
+  &__link:active {
+    transform: translateY(3px);
+
+    color: $color-white-light;
+  }
+
+  &__link--active:link,
+  &__link--active:visited {
+    color: $color-white-light;
+  }
+
+  &:hover &__link:not(:hover) {
+    color: $color-white-dark;
+  }
+}

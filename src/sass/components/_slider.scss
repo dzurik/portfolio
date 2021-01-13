@@ -1,0 +1,242 @@
+.slider {
+  position: relative;
+  width: 100vw;
+  backface-visibility: hidden;
+  height: calc(100vh - 7rem);
+  overflow: hidden;
+  transition: all 2s;
+
+  &__move {
+    position: absolute;
+    background: rgba($color-slider-fade, 0.1);
+    z-index: 1;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    width: 5.5vw;
+    height: 100%;
+    flex: 1 1 50%;
+
+    @media only screen and (max-width: $bp-mobile) {
+      display: none;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      display: none;
+    }
+
+    &--prev {
+      left: 0;
+
+      &:hover {
+        transform: translateX(-0.5rem);
+        background: rgba($color-slider-fade, 0.2);
+      }
+    }
+
+    &--next {
+      right: 0;
+
+      &:hover {
+        transform: translateX(0.5rem);
+        background: rgba($color-slider-fade, 0.2);
+      }
+    }
+
+    &:hover .slider__button {
+      background-color: rgba($color-slider-btn, 1);
+    }
+
+    &:hover .slider__icon {
+      color: $color-primary;
+    }
+  }
+
+  &__move-span {
+    color: $color-slider-icon;
+    margin: 0 2rem;
+
+    @media only screen and (orientation: portrait) and (min-width: $bp-tiny) and (max-width: $bp-smallest) {
+      margin: 0 0.5rem;
+    }
+  }
+
+  &__move-mobile {
+    position: absolute;
+    bottom: 1%;
+    display: none;
+    transition: all 0.5s;
+
+    @media only screen and (max-width: $bp-mobile) {
+      display: block;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      display: flex;
+    }
+
+    &--prev {
+      left: 10%;
+
+      @media only screen and (orientation: portrait) and (max-width: $bp-smaller) {
+        left: 2rem;
+      }
+    }
+    &--next {
+      right: 10%;
+
+      @media only screen and (orientation: portrait) and (max-width: $bp-smaller) {
+        right: 2rem;
+      }
+    }
+  }
+
+  &__button {
+    border: 0;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    color: $color-slider-icon;
+    background-color: rgba($color-slider-btn, 0.8);
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 3rem;
+      width: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+      height: 4rem;
+      width: 4rem;
+      display: inline-block;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      height: 3rem;
+      width: 3rem;
+    }
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+    transition: all 0.3s;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    height: 5rem;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      bottom: -0.5%;
+      height: 3rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-largest) {
+      height: 3rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      bottom: -1%;
+      height: 3rem;
+    }
+  }
+
+  &__dot {
+    border: none;
+    background-color: $color-dark-light-2;
+    opacity: 0.7;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    margin: 0 0.75rem;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    @media only screen and (orientation: portrait) and (min-width: $bp-tiny) and (max-width: $bp-smallest) {
+      margin: 0 0.5rem;
+    }
+
+    &--active {
+      background-color: $color-primary;
+      opacity: 1;
+    }
+  }
+}
+
+.slide {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 7rem);
+  transition: all 2s;
+
+  display: grid;
+  grid-template-rows: calc(100vh - 7rem);
+  grid-template-columns:
+    [full-start] minmax(7rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(7rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(2rem, 1fr) [full-end];
+  }
+
+  @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(2rem, 1fr) [full-end];
+  }
+
+  &--1 {
+    transform: translateX(0%);
+  }
+
+  &--2 {
+    transform: translateX(100%);
+    align-items: center;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      align-items: center;
+    }
+  }
+
+  &--3 {
+    transform: translateX(200%);
+  }
+
+  &--4 {
+    transform: translateX(300%);
+  }
+}

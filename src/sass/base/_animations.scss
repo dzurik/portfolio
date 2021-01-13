@@ -1,0 +1,90 @@
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.FadeIn {
+  animation: FadeIn 1.5s;
+}
+
+.FadeOut {
+  animation: FadeOut 1s;
+}
+
+.GrowFromBottom {
+  height: 100vh !important;
+}
+
+.toggle .navigation__mobile-line--1 {
+  transform: rotate(-45deg) translate(-4px, 3px);
+}
+.toggle .navigation__mobile-line--2 {
+  transition: all 0.3s ease;
+  width: 0;
+}
+.toggle .navigation__mobile-line--3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.Grow--active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.Grow--off {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.Ease-hor--active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.Ease-ver--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Ease-right--off {
+  opacity: 0;
+  transform: translateX(50%);
+}
+
+.Ease-left--off {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.Ease-top--off {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+.Ease-bottom--off {
+  opacity: 0;
+  transform: translateY(50%);
+}

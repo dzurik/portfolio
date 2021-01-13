@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dzurikdesign: Frontend Developer Portfolio</title>
+    <meta name="description" content="Junior webprogrammer Portfolio Website." />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" href="src/img/logo.png" type="image/gif" sizes="16x16" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/icons.css" type="text/css" />
+    <link rel="stylesheet" href="src/css/style.css" type="text/css" />
+
+    <script type="module" defer src="src/js/app.js"></script>
+    <script type="module" defer src="src/js/slider.js"></script>
+    <script type="module" defer src="src/js/gallery.js"></script>
+    <script type="module" defer src="src/js/mail.js"></script>
+    <script type="module" defer src="src/js/modal.js"></script>
+  </head>
+  <body>
+    <div class="follow-box">
+      <div class="follow-box__item follow-box--facebook">
+        <a
+          class="follow-box__link"
+          href="https://www.facebook.com/dzurik.oliver"
+          target="_blank"
+          title="Follow on Facebook"
+          ><i class="follow-box__icon icon-facebook"></i
+        ></a>
+      </div>
+      <div class="follow-box__item follow-box--github">
+        <a
+          class="follow-box__link"
+          href="https://github.com/dzurik/"
+          target="_blank"
+          title="Follow on Github"
+        >
+          <i class="follow-box__icon icon-github"></i
+        ></a>
+      </div>
+      <div class="follow-box__item follow-box--linkedin">
+        <a
+          class="follow-box__link"
+          href="https://www.linkedin.com/in/oliver-dzurik-6a4b0b203"
+          target="_blank"
+          title="Follow on Linkedin"
+          ><i class="follow-box__icon icon-linkedin2"> </i
+        ></a>
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="slider__move slider__move--prev">
+        <button class="slider__button slider__button--prev">
+          <i class="slider__icon icon-undo2"></i>
+        </button>
+      </div>
+
+      <section class="slide slide--1">
+        <div class="stars">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+        </div>
+
+        <header class="header">
+          <div class="header__logo Ease-top--off">
+            <img src="src/img/logo.png" alt="Dzurikdesign logo" class="header__img" />
+          </div>
+
+          <div class="header__center Grow--off">
+            <h1 class="heading-primary">
+              <span class="heading-primary--main"> &#60; Hi, I'm Oliver &#62; </span>
+              <span class="heading-primary--sub"> &#60; Junior Front-end developer &#62; </span>
+            </h1>
+          </div>
+          <div class="header__buttons Ease-bottom--off">
+            <button href="works" class="btn btn__diminishing">
+              <span class="btn__span btn__span--works">MY WORKS</span>
+            </button>
+            <button href="contact" class="btn btn__popup">
+              <span class="btn__span btn__span--contact">SAY HELLO</span
+              ><i class="btn__popup--arrow icon-arrow-right"></i>
+            </button>
+          </div>
+        </header>
+      </section>
+
+      <section class="slide slide--2">
+        <main class="about Grow--off">
+          <div class="about__box about__box--me">
+            <div class="about__top">
+              <img src="src/img/about/me.jpg" alt="It's me Oliver" class="about__image" />
+
+              <div class="about__shadow-wrap">
+                <div class="about__image--alt">
+                  <span class="about__image--span">About me</span>
+                </div>
+              </div>
+            </div>
+            <div class="about__bottom">
+              <div class="about__bottom-box">
+                <h2 class="heading-secondary about__heading">&#60; About me &#62;</h2>
+                <p class="about__paragraph">
+                  I am a 28 years old guy who finished the school as a web developer but in that
+                  time i didn't feel i have enough skill to do that yet and i found a job as
+                  computer tech guy. But i felt i want to be much more. Around two years ago, i
+                  started to learn again and improve myself every single day to reach my goal: BE
+                  PROGRAMMER. I hope the time has come to get my first job as junior programmer.
+                  That's why i made this new portfolio site, to show a bit about myself.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__box about__box--skills">
+            <div class="about__top">
+              <img src="src/img/about/skills.jpg" alt="Programming" class="about__image" />
+
+              <div class="about__shadow-wrap">
+                <div class="about__image--alt">
+                  <span class="about__image--span">My skills</span>
+                </div>
+              </div>
+            </div>
+            <div class="about__bottom">
+              <div class="about__bottom-box">
+                <h2 class="heading-secondary about__heading">&#60; My skills &#62;</h2>
+                <p class="about__paragraph">
+                  Languages with i already i have experiences is HTML, CSS, SASS, Bootstrap,
+                  Wordpress, Git, jQuery, Native Javascript, ES6+. For a little time angular and
+                  node.js. And now i started to learn REACT.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__box about__box--hobbies">
+            <div class="about__top">
+              <img src="src/img/about/hobbies.jpg" alt="Hobbies" class="about__image" />
+
+              <div class="about__shadow-wrap">
+                <div class="about__image--alt">
+                  <span class="about__image--span">My hobbies</span>
+                </div>
+              </div>
+            </div>
+            <div class="about__bottom">
+              <div class="about__bottom-box">
+                <h2 class="heading-secondary about__heading">&#60; My hobbies &#62;</h2>
+                <p class="about__paragraph">
+                  I love to do lot of things in my freetime but i want to mention a few. I really
+                  like to watch great movies and series. Football, not just watching and play, also
+                  bet on it. I like videogames too. Old times i just enjoyed them, now i also want
+                  to know them, how they work this way? In my future plan i want to get real
+                  knowledge about it and create one, at least for mobile.
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+
+      <section class="slide slide--3">
+        <div class="portfolio Grow--off"></div>
+      </section>
+
+      <section class="slide slide--4">
+        <div class="contact Ease-right--off">
+          <div class="contact__left">
+            <h1 class="heading-contact heading-contact--left">&#60; Get in touch &#62;</h1>
+
+            <form class="form" method="post" action="src/php/mail.php">
+              <div class="form__box">
+                <i class="form__icon"></i>
+                <input
+                  type="text"
+                  class="form__input form__input--input"
+                  id="userName"
+                  name="name"
+                  placeholder="John Doe"
+                  autocomplete="off"
+                />
+
+                <label for="userName" class="form__label">Name</label>
+              </div>
+
+              <div class="form__box">
+                <i class="form__icon"></i>
+                <input
+                  type="text"
+                  class="form__input form__input--input"
+                  id="userEmail"
+                  name="email"
+                  placeholder="xyz@example.com"
+                  autocomplete="off"
+                />
+                <label for="userEmail" class="form__label">Email</label>
+              </div>
+
+              <div class="form__box">
+                <i class="form__icon"></i>
+                <input
+                  type="text"
+                  class="form__input form__input--input"
+                  id="userPhone"
+                  name="phone"
+                  placeholder="+36 07 123 4567"
+                  autocomplete="off"
+                />
+                <label for="userPhone" class="form__label">Phone</label>
+              </div>
+
+              <div class="form__box">
+                <i class="form__icon"></i>
+                <input
+                  type="text"
+                  class="form__input form__input--input"
+                  id="userSubject"
+                  name="subject"
+                  placeholder="Subject: Wazzup?"
+                  autocomplete="off"
+                />
+                <label for="userSubject" class="form__label">Subject</label>
+              </div>
+
+              <div class="form__box form__box--textarea">
+                <i class="form__icon"></i>
+                <textarea
+                  type="text"
+                  class="form__input form__input--textarea"
+                  id="userMessage"
+                  name="message"
+                  placeholder="Some message text..."
+                  autocomplete="off"
+                ></textarea>
+                <label for="userMessage" class="form__label form__label--textarea">Message</label>
+              </div>
+
+              <div class="form__bottom">
+                <div class="form__hide">
+                  <div class="form__alert alert-success form__msg" role="alert">
+                    Your message has been sent successfull.
+                  </div>
+                </div>
+
+                <div class="form__send-status">
+                  <button class="btn btn__submit-button" type="submit">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="contact__right">
+            <h1 class="heading-contact heading-contact--right">&#60; Contact &#62;</h1>
+
+            <div class="contact__info-box">
+              <div class="contact__infos">
+                <div class="contact__info">
+                  <i class="contact__icon contact__icon--upper icon-mail2"></i>
+                  <span class="contact_info-data">dzurikdesign@gmail.com</span>
+                </div>
+
+                <div class="contact__info">
+                  <i class="contact__icon contact__icon--upper icon-mobile"></i>
+                  <span class="contact_info-data">+36 20 / 617 - 0817</span>
+                </div>
+              </div>
+              <div class="contact__links">
+                <span class="contact__follow">Follow me:</span>
+
+                <div class="contact__items">
+                  <div class="contact__item contact__item--facebook">
+                    <a
+                      class="contact__link"
+                      href="https://www.facebook.com/dzurik.oliver"
+                      target="_blank"
+                      title="Follow on Facebook"
+                      ><i class="contact__icon contact__icon--lower icon-facebook"></i
+                    ></a>
+                  </div>
+                  <div class="contact__item contact__item--github">
+                    <a
+                      class="contact__link"
+                      href="https://github.com/dzurik/"
+                      target="_blank"
+                      title="Follow on Github"
+                    >
+                      <i class="contact__icon contact__icon--lower icon-github"></i
+                    ></a>
+                  </div>
+                  <div class="contact__item contact__item--linkedin">
+                    <a
+                      class="contact__link"
+                      href="https://www.linkedin.com/in/oliver-dzurik-6a4b0b203/"
+                      target="_blank"
+                      title="Follow on Linkedin"
+                      ><i class="contact__icon contact__icon--lower icon-linkedin2"> </i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="slider__move-mobile slider__move-mobile--prev FadeOn">
+        <button class="slider__button slider__button--prev">
+          <i class="slider__icon icon-arrow-left"></i>
+        </button>
+        <span class="slider__move-span">Previous Page</span>
+      </div>
+
+      <div class="slider__dots"></div>
+
+      <div class="slider__move-mobile slider__move-mobile--next FadeOn">
+        <span class="slider__move-span">Next Page</span>
+        <button class="slider__button slider__button--next">
+          <i class="slider__icon icon-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="slider__move slider__move--next">
+        <button class="slider__button slider__button--next">
+          <i class="slider__icon icon-redo2"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="modal modal--hidden" id="modal"></div>
+
+    <div class="overlay overlay--hidden"></div>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <nav class="navigation">
+          <div class="navigation__mobile">
+            <span class="navigation__mobile-line navigation__mobile-line--1"></span>
+            <span class="navigation__mobile-line navigation__mobile-line--2"></span>
+            <span class="navigation__mobile-line navigation__mobile-line--3"></span>
+          </div>
+
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="/" class="navigation__link" data-link="0">HOME</a>
+            </li>
+            <li class="navigation__item">
+              <a href="about" class="navigation__link" data-link="1">ABOUT</a>
+            </li>
+            <li class="navigation__item">
+              <a href="portfolio" class="navigation__link" data-link="2">WORKS</a>
+            </li>
+            <li class="navigation__item">
+              <a href="contact" class="navigation__link" data-link="3">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="copyright">
+          <p class="copyright__paragraph">
+            &copy; Copyright 2020 <span class="copyright__span">dzurikdesign</span> Portfolio site
+            &dash; All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

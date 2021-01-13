@@ -1,0 +1,42 @@
+.footer {
+  background-color: $color-dark;
+  position: relative;
+
+  &__container {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 10rem;
+
+    @media only screen and (max-width: $bp-mobile) {
+      padding: 2rem 2rem;
+    }
+  }
+}
+
+.copyright {
+  font-style: italic;
+  font-weight: 500;
+  text-align: justify;
+
+  &__paragraph {
+    color: $color-white-light;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-smaller) {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (orientation: portrait) and (min-width: $bp-tiny) and (max-width: $bp-smallest) {
+      font-size: 1.2rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__span {
+    color: $color-primary;
+  }
+}

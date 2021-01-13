@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "title": "Informatique Domestique",
+    "titleShort": "infDom",
+    "backgroundUrl": "/src/img/portfolio/infDom/background.jpg",
+    "logoUrl": "/src/img/portfolio/infDom/logo.png",
+    "imageUrl": "/src/img/portfolio/infDom/demo.jpg",
+    "demoLink": "https://informatiquedomestique.dzurikdesign.com/",
+    "description": "After finished many course to improve my skills, mostly in javascript, with proud I can say, I wrote every single script, every animations without any help. And this is the result."
+  },
+  {
+    "id": 2,
+    "title": "PCABC Számítástechnika",
+    "titleShort": "pcabc",
+    "logoUrl": "/src/img/portfolio/pcabc/logo.png",
+    "imageUrl": "/src/img/portfolio/pcabc/fullscreen.jpg",
+    "demoLink": "http://www.pcabcgyor.hu/",
+    "description": "My old job had a pretty bad website and they asked me to create a new one. They are selling and repairing computers, notebooks and other informatics stuff and they use the site for announcement the components. <br /><br />They made some bad changes alone so, and they asked me to correct it, improve it a bit. (under construction)"
+  },
+  {
+    "id": 3,
+    "title": "Old Portfolio",
+    "titleShort": "oldPortfolio",
+    "backgroundUrl": "/src/img/portfolio/oldPortfolio/background.jpg",
+    "logoUrl": "",
+    "imageUrl": "/src/img/portfolio/oldPortfolio/demo.jpg",
+    "demoLink": "https://demo.dzurikdesign.com/oldportfolio/",
+    "description": "That's my old portfolio website. Created in early 2019, and I think I improved pretty much and that shows me, I am on a good path. I want to keep it up. The reason is here, I wanted to show the differences."
+  },
+  {
+    "id": 4,
+    "title": "Laboris Hungary Kft.",
+    "titleShort": "laboris",
+    "logoUrl": "/src/img/portfolio/laboris/logo.png",
+    "imageUrl": "/src/img/portfolio/laboris/demo.jpg",
+    "demoLink": "https://laborishungary.hu/",
+    "description": "I have an acquaintance whom company is mainly focusing on selling tools and doing industrial cleaning. This website is prepared for them, but not ready yet. <br /><br />I need to do some changes and make some animations to be much nicer."
+  },
+  {
+    "id": 5,
+    "title": "Bet tracker",
+    "titleShort": "betting",
+    "backgroundUrl": "/src/img/portfolio/betting/background.jpg",
+    "logoUrl": "",
+    "imageUrl": "/src/img/portfolio/betting/demo.jpg",
+    "demoLink": "http://betting.dzurikdesign.com/",
+    "description": "This was my first javascript project alone and it was wrote only in vanilla javascript. <br /><br />In the future, this project is still in my plans to improve it to the next level. First of all, change the ugly, vanilla code. For choice the matches, use an API instead of write every single details manually. And a login, to handle more users."
+  },
+  {
+    "id": 6,
+    "title": "Natours",
+    "titleShort": "natours",
+    "backgroundUrl": "/src/img/portfolio/natours/background.jpg",
+    "logoUrl": "/src/img/portfolio/natours/logo.png",
+    "imageUrl": "/src/img/portfolio/natours/demo.jpg",
+    "demoLink": "https://demo.dzurikdesign.com/natours/",
+    "description": "I wanted to get know more about nowdays trends about advanced css and sass and animations, so i decided to start a course from udemy about it. I jumped in and this was the first time I met with the sass, and U just want to say, I love it. <br /><br />My next websites will be also created by sass. This site was finished through the course to practice some new things."
+  },
+
+  {
+    "id": 7,
+    "title": "Forkify",
+    "titleShort": "forkify",
+    "logoUrl": "/src/img/portfolio/forkify/logo.png",
+    "imageUrl": "/src/img/portfolio/forkify/demo.jpg",
+    "demoLink": "https://forkify-project-dzurik.netlify.app/",
+    "description": "I finished this project through a javascript course. That was a really complex project to use all the tools what I already learnt in little pieces. My goal is to be able to create such things like this and much more on my own."
+  },
+  {
+    "id": 8,
+    "title": "Tidal Wave",
+    "titleShort": "ttw",
+    "backgroundUrl": "/src/img/portfolio/ttw/background.jpg",
+    "logoUrl": "/src/img/portfolio/ttw/logo.png",
+    "imageUrl": "/src/img/portfolio/ttw/demo.jpg",
+    "demoLink": "http://tidalwave.dzurikdesign.com/",
+    "description": "This was my first website ever and was created to my thesis. I made the design and programmed it, but every script was a plugin from wordpress. The whole code is a mess, ugly and bad, but that was the first one, so i kept it. <br /><br />Flags just illustration without function, and the site is not responsive, but this will stay like this."
+  },
+  {
+    "id": 9,
+    "title": "Mapty",
+    "titleShort": "mapty",
+    "logoUrl": "/src/img/portfolio/mapty/logo.png",
+    "imageUrl": "/src/img/portfolio/mapty/demo.jpg",
+    "demoLink": "https://demo.dzurikdesign.com/mapty/",
+    "description": "This project is about to record workout runnings and cyclings in map directly. I made project through an advanced javascript course. I gained a closer look about geolocation and leaflet API."
+  },
+  {
+    "id": 10,
+    "title": "Nexter",
+    "titleShort": "nexter",
+    "backgroundUrl": "/src/img/portfolio/nexter/background.jpg",
+    "logoUrl": "",
+    "imageUrl": "/src/img/portfolio/nexter/demo.jpg",
+    "demoLink": "https://demo.dzurikdesign.com/nexter/",
+    "description": "I wanted to get know more about nowadays trends about advanced css and sass and animations, so i decided to start a course from udemy about it. I created this site through the course to practice some sass and grid."
+  },
+  {
+    "id": 11,
+    "title": "Trillo",
+    "titleShort": "trillo",
+    "logoUrl": "/src/img/portfolio/trillo/logo.png",
+    "imageUrl": "/src/img/portfolio/trillo/demo.jpg",
+    "demoLink": "https://demo.dzurikdesign.com/trillo/",
+    "description": "I wanted to get know more about nowadays trends about advanced css and sass and animations, so i decided to start a course from udemy about it. I created this site through the course to practice some sass and flexbox."
+  }
+]

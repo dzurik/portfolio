@@ -1,0 +1,251 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  //transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 5px;
+
+  height: 60vh;
+  width: 70vw;
+  transition: all 0.3s;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-white-light, 1),
+    rgb(255, 255, 255)
+  );
+
+  display: flex;
+
+  @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  @media only screen and (orientation: portrait) and (max-width: $bp-largest) and (min-height: $bp-largest) {
+    flex-direction: column;
+    height: 85vh;
+  }
+
+  @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+    width: 80vw;
+    height: 70vh;
+  }
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__left {
+    flex: 1 1 40%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__right {
+    flex: 1 1 60%;
+    position: relative;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      flex: 1 1 40%;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      flex: 1 1 40%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__paragraph {
+    color: $color-dark;
+    text-align: justify;
+    padding: 0 2rem;
+
+    @media only screen and (max-width: $bp-mobile) {
+      line-height: 1.5;
+      padding: 0;
+    }
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-smaller) {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-big) and (max-height: $bp-mobile) {
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (orientation: portrait) and (min-width: $bp-tiny) and (max-width: $bp-smallest) {
+      font-size: 1.2rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__check {
+    color: $color-dark;
+    font-style: italic;
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (orientation: portrait) and (min-width: $bp-tiny) and (max-width: $bp-smallest) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: -7rem;
+      border-bottom: 1px solid $color-primary;
+
+      @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+        width: 15%;
+      }
+
+      @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+        display: none;
+      }
+
+      @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    position: relative;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+      font-size: 2.5rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-small) {
+      font-size: 2.5rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-big) and (max-height: $bp-mobile) {
+      font-size: 2.5rem;
+    }
+
+    @media only screen and (orientation: portrait) and (min-width: $bp-tiny) and (max-width: $bp-smallest) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      font-size: 2rem;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 1rem;
+      border-bottom: 1px solid $color-primary;
+
+      @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+        width: 15%;
+      }
+    }
+  }
+
+  &__description {
+  }
+
+  &__icon {
+    position: absolute;
+    background: none;
+    color: $color-dark-light;
+    font-size: 2rem;
+    top: 5%;
+    right: 5%;
+    transition: all 0.2s;
+    z-index: 1;
+    cursor: pointer;
+
+    @media only screen and (orientation: portrait) and (min-width: $bp-tiny) and (max-width: $bp-smallest) {
+      top: 4%;
+      right: 4%;
+      font-size: 1.5rem;
+    }
+
+    &--bottom {
+      display: block;
+
+      @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+        display: none;
+      }
+    }
+
+    &--top {
+      display: none;
+
+      @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+        display: block;
+      }
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px) grayscale(70%);
+  z-index: 5;
+  transition: all 0.3s;
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}

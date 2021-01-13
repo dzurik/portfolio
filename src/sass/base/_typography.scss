@@ -1,0 +1,117 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: $default-font-size;
+  color: $color-white-light;
+}
+
+.heading-primary {
+  text-align: center;
+  color: $color-white-light;
+  transition: all 2s;
+
+  &--main {
+    font-size: 7rem;
+    display: block;
+    height: 10rem;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      font-size: 6rem;
+    }
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-smallest) {
+      font-size: 4.5rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-largest) {
+      font-size: 6rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      font-size: 5rem;
+      height: 8rem;
+    }
+  }
+
+  &--sub {
+    font-size: 4rem;
+    display: block;
+    height: 10rem;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      font-size: 3rem;
+    }
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-smaller) {
+      font-size: 2.5rem;
+    }
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-smallest) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-largest) {
+      font-size: 3rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      font-size: 3rem;
+      height: 8rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-weight: 900;
+  text-align: center;
+  font-size: 2rem;
+  color: $color-primary;
+}
+
+.heading-contact {
+  font-weight: 300;
+  font-size: 3rem;
+  color: $color-white-light;
+  text-transform: uppercase;
+
+  @media only screen and (orientation: portrait) and (min-width: $bp-tiny) and (max-width: $bp-smallest) {
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+    font-size: 2rem;
+  }
+
+  &--left {
+    padding-bottom: 2rem;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      text-align: center;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      padding: 0;
+    }
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      padding-bottom: 1rem;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: $bp-large) {
+      padding: 0;
+    }
+  }
+
+  &--right {
+    text-align: center;
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-mobile) {
+      padding-top: 0;
+    }
+
+    @media only screen and (orientation: portrait) and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.follow-box {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 15%;
+  z-index: 2;
+  transform: translateY(-5rem);
+  transition: all 1s;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 5rem;
+    margin-top: -2rem;
+    border-radius: 0 0 100px 100px;
+    transition: all 0.2s;
+
+    &:hover {
+      margin-top: 0;
+    }
+  }
+
+  &__link:link,
+  &__link:visited,
+  &__link:active {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__icon {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+
+  &--facebook {
+    background-color: #4868ad;
+  }
+
+  &--linkedin {
+    background-color: #0077ba;
+  }
+
+  &--github {
+    background-color: #4e545a;
+  }
+}

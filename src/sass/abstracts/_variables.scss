@@ -1,0 +1,44 @@
+// COLORS
+$color-primary: #ff7730;
+$color-primary-light: #ffb900;
+$color-primary-dark: #e25205;
+
+$color-white-light: #e1e1e1;
+$color-white-dark: #616161;
+
+$color-dark: #0c0c0c;
+$color-dark-light: #5c4848;
+$color-dark-light-2: #b9b9b9;
+
+// FONT
+$default-font-size: 1.6rem;
+
+// Home background
+$shadows-small: multiple-box-shadow(100);
+$shadows-medium: multiple-box-shadow(50);
+$shadows-big: multiple-box-shadow(50);
+
+//SLIDER
+$color-slider-fade: #404040;
+$color-slider-btn: #333;
+$color-slider-icon: #cbcbcb;
+
+// FORM
+
+$color-accept: #4caf50;
+$color-decline: #a72a2a;
+
+// Breakpoints
+
+$bp-big: 87.5em; // 1400px
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 56.25em; // 900px
+$bp-mobile: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-smaller: 31.25em; // 500px
+$bp-smallest: 25em; // 400px
+$bp-tiny: 18.75em; // 300px
+
+@media only screen and (orientation: landscape) and (max-width: $bp-large) {
+}

@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // Define 1 rem is 10px 100% = 16px
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 45%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background: radial-gradient(ellipse at bottom, #1b1b1b 0%, #090a0f 100%);
+}
+
+button:focus {
+  outline: none;
+}
